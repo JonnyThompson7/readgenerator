@@ -3,28 +3,44 @@ const fs = require('fs');
 const { generateMarkdown } = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
 
-// TODO: Create an array of questions for user input
+// Questions
 const promptUser = () => {
     return inquirer.prompt([
+// Title of Project
         {
             type: 'input',
             name: 'title',
-            message: 'Enter Project Name'
+            message: 'Enter Project Name',
+            validate: validateInput
         },
+// Project Description
         {
             type: 'input',
             name: 'description',
-            message: 'Describe Project'
+            message: 'Describe Project',
+            validate: validateInput
         },
+// GitHub Username
         {
             type: 'input',
             name: 'username',
-            message: "Enter GitHub Username"
+            message: "Enter GitHub Username",
+            validate: validateInput
         },
+// Email Address
         {
             type: 'input',
             name: 'email',
-            message: 'Enter Email Address'
+            message: 'Enter Email Address',
+            validate: validateInput
+        },
+// Licenses
+        {
+            type: 'checkbox',
+            name: 'licenses',
+            message: 'What Licenses are Used?',
+            choices: ['MIT', 'ODbL', 'PDDL'],
+            validate: validateInput
         }
     ]);
 };

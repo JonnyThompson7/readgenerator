@@ -15,6 +15,7 @@ function renderLicenseSection(license) {}
 const generateMarkdown = (data) => {
   return `# ${data.title}
 
+[![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
 
 #### ${data.description}
 
