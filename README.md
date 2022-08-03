@@ -1,9 +1,17 @@
 # asdf
 
 [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
-[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)
+
+(value) => {
+  if (value === 'MIT') {
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]';
+  } else if (value === 'ODbL') {
+    return '[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)';
+  } else if (value === 'PDDL') {
+    return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)';
+  }
+}
+
 
 #### asdf
 
@@ -16,15 +24,24 @@
 
 
 ## Installation Usage
+
+
+
 ## Contributing
+
+asdf
+
 ## Tests
+
+If this works
+
 ## Questions?
 
 ### Feel Free to Contact me with any other questions!
 
-- [GitHub Profile](https://github.com/asdf)
+- [GitHub Profile](https://github.com/JonnyThompson7)
 
-- [Email Me!](https://mail.google.com/mail/u/0/?fs=1&to=adsf&tf=cm)
+- [Email Me!](https://mail.google.com/mail/u/0/?fs=1&to=asdf&tf=cm)
 
 ## License
 

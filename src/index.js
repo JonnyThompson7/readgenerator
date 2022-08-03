@@ -11,36 +11,43 @@ const promptUser = () => {
             type: 'input',
             name: 'title',
             message: 'Enter Project Name',
-            validate: validateInput
         },
 // Project Description
         {
             type: 'input',
             name: 'description',
             message: 'Describe Project',
-            validate: validateInput
-        },
-// GitHub Username
-        {
-            type: 'input',
-            name: 'username',
-            message: "Enter GitHub Username",
-            validate: validateInput
-        },
-// Email Address
-        {
-            type: 'input',
-            name: 'email',
-            message: 'Enter Email Address',
-            validate: validateInput
         },
 // Licenses
         {
             type: 'checkbox',
             name: 'license',
             message: 'What Licenses are Used?',
-            choices: ['MIT', 'ODbL', 'PDDL'],
-            validate: validateInput
+            choices: ['MIT', 'The Unlincense', 'Apache 2.0'],
+        },
+// Contributors
+        {
+            type: 'input',
+            name: 'contributor',
+            message: 'List Contributors to this Project',
+        },
+// Tests 
+        {
+            type: 'input',
+            name: 'test',
+            message: 'What is being Tested?',
+        },
+// GitHub Username
+        {
+            type: 'input',
+            name: 'username',
+            message: "Enter GitHub Username",
+        },
+// Email Address
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter Email Address',
         }
     ]);
 };
@@ -55,14 +62,14 @@ const writeToFile = (fileName, data) => {
 };
 // Function to initialize app
 function init() {
-    inquirer.prompt(questions).then((data) => {
-        console.log(JSON.stringify(data, null, ''));
-        data.getLicense = getLicense(data.license);
-        writeToFile("./example/README.md", data);
-    });
+//     inquirer.promptUser().then((data) => {
+//         console.log(JSON.stringify(data, null, ''));
+//         data.getLicense = getLicense(data.license);
+//         writeToFile("./example/README.md", data);
+//     });
 };
 
-// Call to initialize app
+// // Call to initialize app
 init();
 
 // Call to Use Answers on generateMarkdown
