@@ -1,8 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const renderLicenseBadge = (license) => {
-
-}
+const getLicense = (value) => {
+  if (value === 'MIT') {
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]';
+  } else if (value === 'ODbL') {
+    return '[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)';
+  } else if (value === 'PDDL') {
+    return '[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)';
+  }
+};
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {}
@@ -28,8 +34,14 @@ const generateMarkdown = (data) => {
 
 
 ## Installation Usage
+
+
 ## Contributing
+
+
 ## Tests
+
+
 ## Questions?
 
 ### Feel Free to Contact me with any other questions!

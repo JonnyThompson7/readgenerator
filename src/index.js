@@ -37,7 +37,7 @@ const promptUser = () => {
 // Licenses
         {
             type: 'checkbox',
-            name: 'licenses',
+            name: 'license',
             message: 'What Licenses are Used?',
             choices: ['MIT', 'ODbL', 'PDDL'],
             validate: validateInput
@@ -45,7 +45,7 @@ const promptUser = () => {
     ]);
 };
 
-// TODO: Create a function to write README file
+// Function to write README file
 const writeToFile = (fileName, data) => {
     fs.writeFileSync(fileName, data, err => {
         if (err) {
@@ -53,13 +53,19 @@ const writeToFile = (fileName, data) => {
         } 
     });
 };
-// TODO: Create a function to initialize app
-function init() {}
+// Function to initialize app
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        console.log(JSON.stringify(data, null, ''));
+        data.getLicense = getLicense(data.license);
+        writeToFile("./example/README.md", data);
+    });
+};
 
-// Function call to initialize app
+// Call to initialize app
 init();
 
-
+// Call to Use Answers on generateMarkdown
 promptUser()
     .then((answers) => {
         const markdown = generateMarkdown(answers);
