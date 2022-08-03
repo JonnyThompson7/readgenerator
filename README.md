@@ -9,13 +9,21 @@
 
 ## Table of Contents
 - [Installation Usage](#installation-usage)
-- [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
-
+- [Questions](#questions)
+- [License](#license)
 
 
 ## Installation Usage
-## License
 ## Contributing
 ## Tests
+## Questions?
+
+### Feel Free to Contact me with any other questions!
+
+- [GitHub Profile](https://github.com/${data.username})
+
+- [Email Me!](https://mail.google.com/mail/u/0/?fs=1&to=jathompson399@gmail.com&tf=cm)
+
+## License

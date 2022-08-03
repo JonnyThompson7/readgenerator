@@ -15,6 +15,16 @@ const promptUser = () => {
             type: 'input',
             name: 'description',
             message: 'Describe Project'
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: "Enter GitHub Username"
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter Email Address'
         }
     ]);
 };
