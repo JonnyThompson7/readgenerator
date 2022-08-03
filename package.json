@@ -1,0 +1,22 @@
+{
+  "name": "readgenerator",
+  "version": "1.0.0",
+  "description": "[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonnyThompson7/readgenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonnyThompson7/readgenerator/issues"
+  },
+  "homepage": "https://github.com/JonnyThompson7/readgenerator#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
