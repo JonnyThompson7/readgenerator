@@ -1,7 +1,7 @@
-// TODO: Include packages needed for this application
+const inquirer = require('inquirer');
 const fs = require('fs');
 const { generateMarkdown } = require('./utils/generateMarkdown');
-const inquirer = require('inquirer');
+
 
 // Questions
 const promptUser = () => {
@@ -18,12 +18,11 @@ const promptUser = () => {
             name: 'description',
             message: 'Describe Project',
         },
-// Licenses
+// Installation
         {
-            type: 'checkbox',
-            name: 'license',
-            message: 'What Licenses are Used?',
-            choices: ['MIT', 'The Unlincense', 'Apache 2.0'],
+            type: 'input',
+            name: 'installation',
+            message: 'Enter Installation Instructions',
         },
 // Contributors
         {
@@ -48,7 +47,15 @@ const promptUser = () => {
             type: 'input',
             name: 'email',
             message: 'Enter Email Address',
-        }
+        },
+// Licenses
+        {
+            type: 'list',
+            name: 'license',
+            message: 'What License is Used?',
+            choices: ['MIT', 'The Unlincense', 'Apache 2.0'],
+            default: 'MIT',
+        },
     ]);
 };
 
@@ -60,23 +67,12 @@ const writeToFile = (fileName, data) => {
         } 
     });
 };
-// Function to initialize app
-function init() {
-//     inquirer.promptUser().then((data) => {
-//         console.log(JSON.stringify(data, null, ''));
-//         data.getLicense = getLicense(data.license);
-//         writeToFile("./example/README.md", data);
-//     });
-};
 
-// // Call to initialize app
-init();
-
-// Call to Use Answers on generateMarkdown
+// Call to Initialize
 promptUser()
-    .then((answers) => {
-        const markdown = generateMarkdown(answers);
-        writeToFile('./README.md', markdown);
+    .then((data) => {
+        const markdown = generateMarkdown(data);
+        writeToFile('./example/README.md', markdown);
     })
     .catch((error) => {
         if (error.isTtyError) {
