@@ -1,9 +1,9 @@
-# 
+# README.md Generator
 
 [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-#### 
+#### A command line app that uses Node.js and Inquirer to create a Mark Down file called README
 
 ## Table of Contents
 - [Installation Usage](#installation-usage)
@@ -15,23 +15,23 @@
 
 ## Installation Usage
 
-
+Must install Inquirer
 
 ## Contributing
 
-
+Jonny Thompson
 
 ## Tests
 
-
+Nothing is being tested currently
 
 ## Questions?
 
 ### Feel Free to Contact me with any other questions!
 
-- [GitHub Profile](https://github.com/)
+- [GitHub Profile](https://github.com/JonnyThompson7)
 
-- [Email Me!](https://mail.google.com/mail/u/0/?fs=1&to=&tf=cm)
+- [Email Me!](https://mail.google.com/mail/u/0/?fs=1&to=JAThompson399@gmail.com&tf=cm)
 
 ## License
 
